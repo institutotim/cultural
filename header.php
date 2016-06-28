@@ -49,7 +49,7 @@
                 <?php if (is_active_sidebar('header-widget-area')) : ?>
                     <li><a href="#tab-2" class="highlights-toggle" data-tab="tab-2"><i class="fa fa-search"></i></a></li>
                 <?php endif; ?>
-                <li><a href="#tab-3" class="calendar-toggle" data-tab="tab-3"><i class="fa fa-calendar"></i></a></li>
+                <li><a href="<?php echo site_url('/eventos/programacao'); ?>" class="calendar-toggle" ><i class="fa fa-calendar"></i></a></li>
             </ul>
 
             <div id="tabs" class="toggle-tabs">
