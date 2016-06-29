@@ -536,7 +536,7 @@ img.aligncenter {
     display: none;
 }
 
-.fullscreen {
+.fullscreen, .hidden {
     display: none;
 }
 
@@ -2450,3 +2450,11 @@ button.mfp-arrow-left {
   }
 }
 
+@media screen and (max-width: 40em) {
+    #mobile-menu-handler {
+        display:block;
+    }
+    #tabs-menu-handler {
+		display: none;
+    }
+}
