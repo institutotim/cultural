@@ -260,7 +260,7 @@ function cultural_scripts() {
 
 add_action('wp_enqueue_scripts', 'cultural_scripts');
 
-	
+
 function add_scripts_admin(){
    wp_enqueue_script('jquery-time-picker', get_bloginfo('template_directory') . '/js/jquery.datetimepicker.full.js', array('jquery'));
    wp_enqueue_style('time-picker-style', get_bloginfo('template_directory') . '/css/jquery.datetimepicker.css');
@@ -340,15 +340,16 @@ function cultural_widgets_init() {
 
 add_action('widgets_init', 'cultural_widgets_init');
 
-add_filter('nav_menu_link_attributes', function($attr, $item) {
-    if ($item->object == 'category') {
-        $cat_data = get_option('category_' . $item->object_id);
-        $cat_color = $cat_data['color'];
 
-        $attr['style'] = 'background-color:' . $cat_color;
-    }
-    return $attr;
-}, 10, 4);
+// add_filter('nav_menu_link_attributes', function($attr, $item) {
+//     if ($item->object == 'category') {
+//         $cat_data = get_option('category_' . $item->object_id);
+//         $cat_color = $cat_data['color'];
+//         $attr['style'] = 'background-color:' . $cat_color;
+//     }
+//     return $attr;
+// }, 10, 4);
+
 
 if ( function_exists('register_sidebar') )
 register_sidebar(array(
